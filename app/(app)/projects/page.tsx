@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 import JoinLeaveButton from '@/components/JoinLeaveButton'
+import ExpandableDescription from '@/components/ExpandableDescription'
 
 export default async function ProjectsPage() {
   const supabase = await createClient()
@@ -41,7 +42,7 @@ export default async function ProjectsPage() {
                 )}
               </div>
               {project.description && (
-                <p className="text-gray-400 text-sm truncate">{project.description}</p>
+                <ExpandableDescription text={project.description} />
               )}
             </div>
 

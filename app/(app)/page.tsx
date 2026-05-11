@@ -51,10 +51,10 @@ export default async function NetworkPage() {
         {sorted.map(member => (
           <div
             key={member.id}
-            className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden flex flex-col"
+            className="bg-gray-900 border border-gray-800 rounded-xl flex flex-col"
           >
             {/* Avatar — square top section */}
-            <div className="aspect-square w-full bg-gray-800 flex items-center justify-center">
+            <div className="aspect-square w-full bg-gray-800 flex items-center justify-center rounded-t-xl overflow-hidden">
               {member.avatar_url ? (
                 <img
                   src={member.avatar_url}
